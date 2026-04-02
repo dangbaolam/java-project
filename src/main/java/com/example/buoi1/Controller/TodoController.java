@@ -26,9 +26,6 @@ public class TodoController {
     public ResponseEntity <List<Todo>> getallTodos(){
         List<Todo> todos = todoService.findAll();
         return new  ResponseEntity<>(todos, HttpStatus.OK);
-//        return ResponseEntity.ok(todos);
-//        return ResponseEntity.status(HttpStatus.OK).body(todos);
-//        return  ResponseEntity.ok().header("Access-Control-Allow-Origin", "*").body(todos);
     }
     @GetMapping("{id}")
     public ResponseEntity<Todo> getTodo(@PathVariable long id){
